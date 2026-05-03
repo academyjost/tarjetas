@@ -1,9 +1,17 @@
 function crearTarjetas() {
-    let contenido = "";
     let divTarjetas = document.getElementById("divTarjetas");
-    for(let i=1 ;i<=5;i++){
-        contenido = contenido + `<div class="item">` + i + `</div>`;
-        divTarjetas.innerHTML = contenido;
+
+    let desde = Number(document.getElementById("txtDesde").value);
+    let hasta = Number(document.getElementById("txtHasta").value);
+    let salto = Number(document.getElementById("txtSaltos").value);
+    
+    if (salto<=0) {
+        salto = 1;
     }
-    divTarjetas.innerHTML = contenido;
+    let contenidor = "";
+
+    for (let i = desde; i <= hasta; i+=salto) {
+        contenidor += `<div class="item">${i}</div>`;
+    }
+    divTarjetas.innerHTML = contenidor;
 }
