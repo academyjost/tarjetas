@@ -1,7 +1,7 @@
 function crearTarjetas() {
     let divTarjetas = document.getElementById("divTarjetas");
 
-    let desde = Number(document.getElementById("txtDesde").value);
+    let desde = Number(document.getElementById("txtnumeroinicial").value);
     let hasta = Number(document.getElementById("txtHasta").value);
     let salto = Number(document.getElementById("txtSaltos").value);
     
